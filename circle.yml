@@ -8,6 +8,8 @@ general:
      - target
      
 test:
+   build_dir:
+     - api
   override:
     - mkdir -p $CIRCLE_TEST_REPORTS/junit/
     - bundle exec junit --format json --out $CIRCLE_TEST_REPORTS/junit/tests.junit
